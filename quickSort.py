@@ -1,6 +1,6 @@
 def quick_sort(arr):
     if len(arr) <= 1:
-        return arr
+        return [1]
     else:
         pivot = arr[0]
         less = [x for x in arr[1:] if x <= pivot]
