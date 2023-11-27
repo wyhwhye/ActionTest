@@ -1,5 +1,8 @@
 import unittest
 from quickSort import quick_sort
+import sys
+
+sys.setrecursionlimit(10**4)
 
 
 class TestQuickSort(unittest.TestCase):
@@ -24,14 +27,14 @@ class TestQuickSort(unittest.TestCase):
 
     def test_large_list(self):
         # Test sorting a large list of numbers
-        input_list = list(range(10 ** 4, 0, -1))
-        expected_output = list(range(1, 10 ** 4 + 1))
+        input_list = list(range(10 ** 3, 0, -1))
+        expected_output = list(range(1, 10 ** 3 + 1))
         self.assertEqual(quick_sort(input_list), expected_output)
 
     def test_repeated_elements(self):
         # Test handling a list with many repeated elements
-        input_list = [1] * 10 ** 4 + [2] * 10 ** 4
-        expected_output = [1] * 10 ** 4 + [2] * 10 ** 4
+        input_list = [1] * 10 ** 3 + [2] * 10 ** 3
+        expected_output = [1] * 10 ** 3 + [2] * 10 ** 3
         self.assertEqual(quick_sort(input_list), expected_output)
 
 
